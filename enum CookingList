@@ -1,0 +1,11 @@
+public enum CookingList {
+	raw,
+	boiled,
+	fried;
+	
+	protected String nameConst;
+
+	public String getNameConst() {
+		return nameConst;
+	}
+}
