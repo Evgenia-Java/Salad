@@ -1,0 +1,29 @@
+abstract class Ingredients {
+
+	protected String name;
+	protected int proteins;
+	protected int fats;
+	protected int carbohydrates;
+	protected CookingList cookingEnum;
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public CookingList getNameConst() {
+		return getNameConst();
+	}
+	
+	
+	Ingredients(String name, CookingList cookingEnum, int p, int f, int c){
+		this.name = name;
+		this.cookingEnum = cookingEnum;
+		proteins = p;
+		fats = f;
+		carbohydrates = c;
+	}
+	
+	public abstract int cooking();
+}
