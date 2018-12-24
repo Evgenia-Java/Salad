@@ -1,0 +1,59 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main_class {
+
+	public static void main(String[] args) {
+	
+		Meat_or_fish chicken_boiled = new Meat_or_fish("Chicken", CookingList.boiled, 23, 1, 0, 100);
+		Meat_or_fish chicken_fried = new Meat_or_fish("Chicken", CookingList.fried, 23, 1, 0, 100);
+		
+		Meat_or_fish turkey_boiled = new Meat_or_fish("Turkey", CookingList.boiled, 20, 4, 0, 100);
+		Meat_or_fish turkey_fried = new Meat_or_fish("Turkey", CookingList.fried, 20, 4, 0, 100);
+		
+		Meat_or_fish veal_boiled = new Meat_or_fish("Veal", CookingList.boiled, 28, 2, 0, 100);
+		Meat_or_fish veal_fried = new Meat_or_fish("Veal", CookingList.fried, 28, 2, 0, 100);
+		
+		Vegetables beijing_cabbage_raw = new Vegetables("Beijing_cabbage", CookingList.raw, 5, 0, 6, 100);
+		Vegetables beijing_cabbage_boiled = new Vegetables("Beijing_cabbage", CookingList.boiled, 5, 0, 6, 100);
+		Vegetables beijing_cabbage_fried = new Vegetables("Beijing_cabbage", CookingList.fried, 5, 0, 6, 100);
+		
+		Vegetables cucumber_raw = new Vegetables("Сucumber", CookingList.raw, 1, 0, 3, 100);
+		Vegetables cucumber_boiled = new Vegetables("Сucumber", CookingList.boiled, 1, 0, 3, 100);
+		Vegetables cucumber_fried = new Vegetables("Сucumber", CookingList.fried, 1, 0, 3, 100);
+		
+		Vegetables avocado_raw = new Vegetables("Avocado", CookingList.raw, 2, 20, 7, 100);
+		Vegetables avocado_boiled = new Vegetables("Avocado", CookingList.boiled, 2, 20, 7, 100);
+		Vegetables avocado_fried = new Vegetables("Avocado", CookingList.fried, 2, 20, 7, 100);
+		
+		Dressing_salad linseed_oil = new Dressing_salad("Linseed_oil", CookingList.raw, 1, 91, 1, 100);
+		Dressing_salad ginger_oil = new Dressing_salad("Ginger_oil", CookingList.raw, 0, 100, 4, 100);
+		Dressing_salad teos = new Dressing_salad("Teos", CookingList.raw, 7, 2, 4, 100);
+		
+		
+		Plate s1 = new Plate("GG", chicken_boiled, cucumber_raw, beijing_cabbage_raw, teos);
+		//System.out.println(s1);
+		//System.out.println(s1.finishKcal());
+		
+		List<Plate> salad = new ArrayList<>();
+		salad.add(new Plate().setName("My salad"));
+		salad.add(new Plate().setComponents(veal_fried));
+		salad.add(new Plate().setComponents(avocado_raw));
+		salad.add(new Plate().setComponents(ginger_oil));
+		
+		List<Plate> forSalad = salad;
+			for (Plate fs : forSalad) {
+				System.out.println(fs);
+			}
+		
+		/* for print Enum list (check)
+		CookingList forEnum [] = CookingList.values();
+		for (CookingList fs : forEnum) {
+			System.out.println(fs);
+		}*/
+		
+		
+		
+		//???? System.out.println(chicken_boiled.cooking());
+}
+}
